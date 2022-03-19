@@ -1,0 +1,9 @@
+# install utop
+opam repository add default
+opam install utop
+
+# apply the patch
+patch -p1 < devtools/utop-fix
+
+# now you can just start utop
+dune utop
